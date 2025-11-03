@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Thumb documentário lixo zero">
+  <defs>
+    <linearGradient id="b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="48" fill="url(#b)"/>
+  <g opacity=".25">
+    <circle cx="400" cy="240" r="180" fill="#2563eb"/>
+    <circle cx="1400" cy="680" r="240" fill="#16a34a"/>
+  </g>
+  <g fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round">
+    <path d="M540 450h320l120-160"/>
+    <path opacity=".5" d="M1080 640h-360l-160-200"/>
+  </g>
+  <g fill="#f8fafc">
+    <text x="160" y="320" font-family="Inter, 'Segoe UI', sans-serif" font-size="92" font-weight="800" letter-spacing="-0.04em">
+      Documentário • Rumo ao lixo zero
+    </text>
+    <text x="160" y="420" font-family="Inter, 'Segoe UI', sans-serif" font-size="44" font-weight="500" opacity=".85">
+      Histórias reais de Balneário Camboriú
+    </text>
+  </g>
+  <g transform="translate(1200 260)">
+    <rect x="0" y="0" width="260" height="260" rx="32" fill="rgba(15, 23, 42, 0.5)" stroke="url(#accent)" stroke-width="8"/>
+    <polygon points="110,80 190,130 110,180" fill="#f8fafc"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Lixo Zero Express">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="flare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="320" cy="160" rx="340" ry="180" fill="#16a34a" opacity=".08"/>
+  <ellipse cx="860" cy="500" rx="380" ry="200" fill="#2563eb" opacity=".12"/>
+  <g fill="none" stroke="url(#flare)" stroke-width="8" stroke-linecap="round">
+    <path d="M200 410c90-120 260-210 430-210 170 0 340 90 430 210"/>
+    <path opacity=".4" d="M220 460c80-110 240-190 410-190 170 0 320 90 410 190"/>
+  </g>
+  <g fill="#fff">
+    <text x="120" y="250" font-family="Inter, 'Segoe UI', sans-serif" font-size="82" font-weight="700" letter-spacing="-0.04em">
+      Lixo Zero Express
+    </text>
+    <text x="120" y="330" font-family="Inter, 'Segoe UI', sans-serif" font-size="32" font-weight="500" opacity=".82">
+      Guia de separação, mapa de ecopontos e vitrine da Semana Lixo Zero UNIVALI.
+    </text>
+    <text x="120" y="392" font-family="Inter, 'Segoe UI', sans-serif" font-size="24" font-weight="600" fill="url(#flare)">
+      Conheça. Compartilhe. Aja hoje.
+    </text>
+  </g>
+</svg>

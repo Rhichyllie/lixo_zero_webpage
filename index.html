@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lixo Zero Express | Semana Lixo Zero UNIVALI</title>
+    <meta
+      name="description"
+      content="Descubra como separar resíduos, encontre ecopontos em Balneário Camboriú e explore a vitrine da turma da Semana Lixo Zero UNIVALI."
+    />
+    <meta name="keywords" content="lixo zero, reciclagem, univali, ecoponto, sustentabilidade" />
+    <meta name="author" content="Turma Semana Lixo Zero - UNIVALI" />
+    <meta name="color-scheme" content="dark light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lixo Zero Express" />
+    <meta property="og:description" content="Guia rápido, mapa de ecopontos e vitrine de projetos da Semana Lixo Zero UNIVALI." />
+    <meta property="og:url" content="https://lixo-zero-express.local/" />
+    <meta property="og:image" content="assets/og-banner.svg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lixo Zero Express" />
+    <meta name="twitter:description" content="Encontre ecopontos e projetos da Semana Lixo Zero UNIVALI." />
+    <meta name="twitter:image" content="assets/og-banner.svg" />
+    <link rel="canonical" href="https://lixo-zero-express.local/" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" fetchpriority="low" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin fetchpriority="low" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      as="style"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      integrity="sha384-EjFSHy1BX+dHufV6yq9CfP9EQ82XppY/85zBpCv1gYsrDh1U4sV0Fp1pT7LP5yS+"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body data-theme="auto">
+    <a class="skip-link" href="#principal">Ir para o conteúdo principal</a>
+    <header class="topbar" id="topo">
+      <div class="container topbar__content">
+        <a class="brand" href="#topo" aria-label="Início Lixo Zero Express">
+          <span aria-hidden="true">♻️</span> Lixo Zero <span>Express</span>
+        </a>
+        <nav class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#guia">Guia</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#parceiro">Parceiro</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#sobre">UNIVALI</a></li>
+          </ul>
+        </nav>
+        <div class="topbar__actions">
+          <button type="button" id="shareButton" class="chip" data-action="share">
+            <span aria-hidden="true">🔗</span>
+            <span>Compartilhar</span>
+          </button>
+          <button type="button" id="qrButton" class="chip chip--brand">
+            <span aria-hidden="true">⬇️</span>
+            <span>Baixar QR</span>
+          </button>
+          <button
+            type="button"
+            id="themeToggle"
+            class="chip"
+            aria-label="Alternar modo de cor"
+            aria-live="polite"
+          >
+            <span aria-hidden="true">🌓</span>
+            <span class="theme-toggle__label">Tema</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="principal">
+            <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__layout">
+          <figure class="hero__art" aria-hidden="true">
+            <div class="hero__art-glow" role="presentation"></div>
+            <img
+              src="assets/hero.jpg"
+              alt="Materiais recicláveis e embalagens limpas prontos para entrega na cooperativa."
+              width="720"
+              height="680"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div class="hero__copy">
+            <p class="eyebrow kicker">Semana Lixo Zero — UNIVALI</p>
+            <h1 id="hero-title">Itajaí rumo ao lixo zero. Você leva, a cooperativa transforma.</h1>
+            <p class="hero__microcopy">
+              Guia, mapa e vitrine da turma em um só lugar para separar certo e acelerar o impacto local.
+              Compartilhe o QR com vizinhos e mobilize o bairro para a Semana Lixo Zero.
+            </p>
+            <div class="hero__cta" role="group" aria-label="Ações rápidas">
+              <a class="button button--brand" href="#guia">Ver guia</a>
+              <a class="button button--ghost" href="#mapa">Abrir mapa</a>
+              <button class="button button--soft" type="button" id="heroQr">Baixar QR desta página</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="cta-block" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="callout">
+            <div>
+              <h2 id="cta-title">Comece hoje</h2>
+              <ul class="cta-block__list">
+                <li>🧼 Limpe e seque as embalagens.</li>
+                <li>📍 Entregue nos ecopontos do mapa (ou diretamente à cooperativa parceira).</li>
+                <li>🧠 Registre seus kg na Semana Lixo Zero quando houver campanha ativa.</li>
+                <li>🤝 Convide amigos e vizinhos a fazer o mesmo.</li>
+              </ul>
+            </div>
+            <a class="button button--brand" href="#mapa">Seu impacto começa hoje.</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide" id="guia" aria-labelledby="guide-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow kicker">Guia rápido</p>
+            <h2 id="guide-title">Separe certo em quatro etapas claras</h2>
+            <p>
+              Um checklist objetivo para usar em casa ou na empresa. Navegue com o teclado ou toque para ler mais detalhes.
+            </p>
+          </header>
+          <div class="guide__grid" role="list">
+            <article class="guide-card" role="listitem">
+              <div class="guide-card__icon" aria-hidden="true">♻️</div>
+              <h3>Recicláveis</h3>
+              <p>Embalagens limpas e secas de papel, plástico, metal e vidro. Achate e feche para otimizar espaço na coleta.</p>
+            </article>
+            <article class="guide-card" role="listitem">
+              <div class="guide-card__icon" aria-hidden="true">🌱</div>
+              <h3>Orgânicos</h3>
+              <p>Restos de alimento e podas viram composto ou biofertilizante. Se não houver solução, mantenha bem separados.</p>
+            </article>
+            <article class="guide-card" role="listitem">
+              <div class="guide-card__icon" aria-hidden="true">🚯</div>
+              <h3>Rejeitos</h3>
+              <p>Itens contaminados ou sem reciclagem viável. Embale-os e não misture com recicláveis para evitar retrabalho.</p>
+            </article>
+            <article class="guide-card" role="listitem">
+              <div class="guide-card__icon" aria-hidden="true">🛢️</div>
+              <h3>Especiais</h3>
+              <p>Óleo usado, eletrônicos, pilhas e lâmpadas exigem logística reversa. Use o mapa e entregue em pontos dedicados.</p>
+            </article>
+          </div>
+          <details class="accordion" data-component="accordion">
+            <summary class="accordion__summary">
+              <span>Boas escolhas na compra</span>
+              <span aria-hidden="true" class="accordion__icon">➜</span>
+            </summary>
+            <div class="accordion__content">
+              <ul class="accordion__list">
+                <li><strong>Reutilizáveis/retornáveis:</strong> refil, retornáveis, potes que duram e voltam para a cadeia.</li>
+                <li><strong>Recicláveis fáceis:</strong> PET incolor (♺1), PEAD/HDPE (♺2), vidro e rótulo fácil de remover.</li>
+                <li><strong>Evite:</strong> multimateriais, plásticos pretos ou muito pigmentados, rótulo sleeve 360º.</li>
+              </ul>
+              <p class="accordion__note">Nota: PET incolor tem maior valor de reciclagem que o colorido.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="map" id="mapa" aria-labelledby="map-title">
+        <div class="container map__layout">
+          <div class="map__aside">
+            <header class="section-header">
+              <p class="eyebrow kicker">Mapa colaborativo</p>
+              <h2 id="map-title">Ecopontos por categoria</h2>
+              <p>
+                Escolha o tipo de resíduo e encontre o ponto ideal. Cada item da lista foca o mapa automaticamente.
+              </p>
+            </header>
+            <div class="map-filters" id="map-filters" role="group" aria-label="Filtrar ecopontos por categoria"></div>
+            <ul class="map__list" id="map-list" aria-live="polite"></ul>
+            <p class="map__note">
+              Dados geográficos: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
+            </p>
+          </div>
+          <div class="map__canvas">
+            <div id="map" role="region" aria-label="Mapa interativo de ecopontos" tabindex="0"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-partner" id="parceiro" aria-labelledby="partner-title" hidden>
+        <div class="container community-partner__layout">
+          <figure class="community-partner__media" aria-hidden="true">
+            <div class="community-partner__glow" role="presentation"></div>
+            <img
+              id="partner-image"
+              src=""
+              alt=""
+              width="360"
+              height="360"
+              loading="lazy"
+              decoding="async"
+              hidden
+            />
+            <div class="community-partner__fallback" id="partner-fallback" hidden></div>
+          </figure>
+          <div class="community-partner__content">
+            <p class="eyebrow kicker">Parceiro da Comunidade</p>
+            <h2 id="partner-title"></h2>
+            <p id="partner-about"></p>
+            <div class="button-grid button-grid--inline">
+              <a class="button button--brand" id="partner-maps" href="#" target="_blank" rel="noopener">Levar meus recicláveis</a>
+              <a class="button button--ghost" id="partner-site" href="#" target="_blank" rel="noopener">Conhecer a Cooperfoz</a>
+            </div>
+            <div class="partner-tips" id="partner-tips-card">
+              <h3 class="partner-tips__title">Dicas de preparo</h3>
+              <ul class="partner-tips__list" id="partner-tips"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projetos" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow kicker">Vitrine da turma</p>
+            <h2 id="projects-title">Projetos para inspirar mudanças reais</h2>
+            <p>
+              Explore iniciativas que conectam teoria e prática na jornada rumo ao lixo zero.
+            </p>
+          </header>
+          <div class="projects__actions">
+            <label class="field" for="project-search">
+              <span class="field__label">Buscar projetos</span>
+              <input
+                id="project-search"
+                type="search"
+                name="search"
+                placeholder="Ex.: compostagem, coleta seletiva..."
+                autocomplete="off"
+              />
+            </label>
+          </div>
+          <div class="chip-group" id="project-filters" role="group" aria-label="Filtrar projetos por tema"></div>
+          <div
+            class="projects__grid"
+            id="project-grid"
+            role="list"
+            aria-live="polite"
+            aria-busy="true"
+          ></div>
+          <p class="projects__empty" id="project-empty" hidden>
+            Nada encontrado — ajuste os temas ou refine a busca.
+          </p>
+        </div>
+      </section>
+
+      <section class="agenda" id="agenda" aria-labelledby="agenda-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow kicker">Programação</p>
+            <h2 id="agenda-title">Eventos da Semana Lixo Zero</h2>
+            <p>Participe das ações presenciais e online lideradas pela turma.</p>
+          </header>
+          <div id="agenda-cta" class="agenda__cta" aria-live="polite"></div>
+          <div class="agenda__list" id="agenda-list" role="list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="about" id="sobre" aria-labelledby="about-title">
+        <div class="container about__layout">
+          <div>
+            <header class="section-header">
+              <p class="eyebrow kicker">Sobre a UNIVALI</p>
+              <h2 id="about-title">Extensão que transforma território</h2>
+            </header>
+            <p>
+              A Universidade do Vale do Itajaí (UNIVALI) integra ensino, pesquisa e extensão para impulsionar mudanças socioambientais. Na disciplina <strong>Práticas de Comunitária de Extensão Universitária (PCEU)</strong>, estudantes assumem desafios reais das cidades e criam soluções que reduzem impactos ambientais e promovem comunidades mais conscientes.
+            </p>
+            <p>
+              A Semana Lixo Zero é oportunidade de colocar a teoria em prática: monitorar resíduos, educar vizinhanças e conectar iniciativas locais. Cada ação gera dados e histórias que retroalimentam novos projetos.
+            </p>
+          </div>
+          <aside class="about__aside" aria-labelledby="team-title">
+            <h3 id="team-title">Equipe</h3>
+            <ul class="about__team" id="team-list"></ul>
+            <p class="about__badge" id="term-label"></p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="references" id="referencias" aria-labelledby="references-title">
+        <div class="container">
+          <span id="refs" class="visually-hidden" aria-hidden="true"></span>
+          <header class="section-header">
+            <p class="eyebrow kicker">Referências</p>
+            <h2 id="references-title">Bases legais e guias essenciais</h2>
+          </header>
+          <ul class="references__list" id="references-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__layout">
+        <div>
+          <a class="brand brand--footer" href="#topo">Lixo Zero Express</a>
+          <p class="footer__text">
+            Plataforma criada pela turma de Ciência da Computação da UNIVALI para acelerar a transição rumo ao lixo zero.
+          </p>
+        </div>
+        <div class="footer__meta">
+          <span>Desenvolvido em Itajaí • 2025</span>
+          <span id="course-label"></span>
+        </div>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript">
+        Esta página funciona melhor com JavaScript habilitado para carregar o mapa, filtros e vitrines interativas.
+      </div>
+    </noscript>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"
+      integrity="sha384-4h+qC0iEzgWXc7lP1NXwI7c46lY4wvXQX09nvLYKsDHhDOlSmHgYWqYxei0Ydbx0"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script type="module" src="scripts.js"></script>
+  </body>
+</html>

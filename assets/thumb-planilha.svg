@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Thumb planilha indicadores">
+  <defs>
+    <linearGradient id="d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="48" fill="url(#d)"/>
+  <g fill="#0f172a" opacity=".08">
+    <rect x="200" y="220" width="1200" height="460" rx="32"/>
+  </g>
+  <g fill="none" stroke="rgba(15,23,42,0.12)" stroke-width="4">
+    <path d="M280 300h1040"/>
+    <path d="M280 380h1040"/>
+    <path d="M280 460h1040"/>
+    <path d="M280 540h1040"/>
+    <path d="M440 240v520"/>
+    <path d="M720 240v520"/>
+    <path d="M1000 240v520"/>
+    <path d="M1280 240v520"/>
+  </g>
+  <path d="M280 580l160-120 200 80 200-200 200 120 200-240" fill="none" stroke="url(#line)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0f172a">
+    <text x="220" y="200" font-family="Inter, 'Segoe UI', sans-serif" font-size="82" font-weight="800" letter-spacing="-0.04em">
+      Indicadores Semanais
+    </text>
+    <text x="220" y="270" font-family="Inter, 'Segoe UI', sans-serif" font-size="40" font-weight="600" opacity=".72">
+      Registre peso, destino e responsáveis
+    </text>
+  </g>
+</svg>

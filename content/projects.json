@@ -1,0 +1,172 @@
+{
+  "about": {
+    "university": "UNIVALI",
+    "course": "Ciência da Computação",
+    "team": [
+      "Rhichyllie Baptista Stefen",
+      "Lucas Martins Pedrini",
+      "Luan Magarão de França",
+      "Lucas Barcia López Hellmann",
+      "Matheus Henrique Tomelin Mafra"
+    ],
+    "term": "Semana Lixo Zero 2025"
+  },
+  "map": {
+    "points": [
+      {
+        "name": "Ecoponto Central - Recicláveis",
+        "type": "Recicláveis",
+        "lat": -26.9934,
+        "lng": -48.6351,
+        "info": "Seg a sáb, 8h às 18h • (47) 3224-0001"
+      },
+      {
+        "name": "Cooperativa Vidro Vivo",
+        "type": "Vidro",
+        "lat": -26.9829,
+        "lng": -48.6542,
+        "info": "Recebe garrafas e potes limpos • Visitas educativas"
+      },
+      {
+        "name": "Ponto de Coleta Óleo Bom",
+        "type": "Óleo",
+        "lat": -26.9896,
+        "lng": -48.6518,
+        "info": "Entrega 24h • Recepção automática"
+      },
+      {
+        "name": "TechCycle - Eletrônicos",
+        "type": "Eletrônicos",
+        "lat": -26.9961,
+        "lng": -48.6438,
+        "info": "Coleta aparelhos, pilhas e cabos • Retirada agendada"
+      },
+      {
+        "name": "COOPERFOZ (Itajaí)",
+        "type": "Recicláveis",
+        "lat": -26.9024,
+        "lng": -48.6541,
+        "info": "Economia solidária • Recebimento direto da comunidade"
+      },
+      {
+        "name": "Recicla Bairro das Nações",
+        "type": "Recicláveis",
+        "lat": -26.9715,
+        "lng": -48.6419,
+        "info": "Domingo especial de triagem comunitária"
+      }
+    ]
+  },
+  "events": [],
+  "projects": [
+    {
+      "title": "Guia visual de compostagem urbana",
+      "type": "pdf",
+      "url": "https://www.unep.org/sites/default/files/2023-03/compostagem-urbana.pdf",
+      "thumb": "assets/thumb-compostagem.svg",
+      "desc": "Fluxo passo a passo para implementar compostagem em pequenos espaços.",
+      "tags": [
+        "compostagem",
+        "orgânicos",
+        "passo a passo"
+      ]
+    },
+    {
+      "title": "Documentário: Rumo ao lixo zero BC",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=5qap5aO4i9A",
+      "thumb": "assets/thumb-documentario.svg",
+      "desc": "Histórias de moradores que transformaram a gestão de resíduos no bairro.",
+      "tags": [
+        "educação",
+        "histórias",
+        "vídeo"
+      ]
+    },
+    {
+      "title": "Mapa fotográfico dos ecopontos",
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80",
+      "thumb": "assets/thumb-ecopontos.svg",
+      "desc": "Registro fotográfico dos principais pontos de entrega voluntária.",
+      "tags": [
+        "ecopontos",
+        "fotografia"
+      ]
+    },
+    {
+      "title": "Planilha de indicadores semanais",
+      "type": "link",
+      "url": "https://docs.google.com/spreadsheets/d/indicadores-lixo-zero",
+      "thumb": "assets/thumb-planilha.svg",
+      "desc": "Tabela colaborativa para registrar pesos e destinos dos resíduos.",
+      "tags": [
+        "dados",
+        "monitoramento"
+      ]
+    }
+  ],
+  "refs": [
+    {
+      "label": "ODS 12 – ONU Brasil",
+      "url": "https://brasil.un.org/pt-br/sdgs/12"
+    },
+    {
+      "label": "PNRS – Lei 12.305/2010 (Planalto)",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
+    },
+    {
+      "label": "Decreto 10.936/2022 (regulamenta a PNRS)",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10936.htm"
+    },
+    {
+      "label": "Guia de boas práticas para óleo de cozinha (ABIOVE)",
+      "url": "https://www.abiove.org.br/guia-oleo/"
+    }
+  ],
+  "partner": {
+    "name": "Cooperfoz Itajaí",
+    "about": "Cooperativa de reciclagem da economia solidária que atua em Itajaí, triando materiais e gerando renda para famílias.",
+    "site": "https://cooperfozitajai.wixsite.com/economiasolidaria/sobre-nos",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cooperfoz+Itajaí",
+    "tips": [
+      "Lave e seque",
+      "Abrir/achatar Tetra Pak",
+      "Óleo em PET bem fechada"
+    ]
+  },
+  "awareness": [
+    {
+      "label": "Limpo e seco → reciclagem garantida",
+      "ref": "#refs"
+    },
+    {
+      "label": "Óleo: guardar em PET incolor bem fechada",
+      "ref": "#refs"
+    },
+    {
+      "label": "Tetra Pak: lavar, secar e ACHATAR",
+      "ref": "#refs"
+    },
+    {
+      "label": "Orgânicos separados evitam contaminação",
+      "ref": "#refs"
+    },
+    {
+      "label": "Compra consciente: prefira reutilizáveis ou recicláveis",
+      "ref": "#refs"
+    },
+    {
+      "label": "PET incolor tem maior valor de reciclagem",
+      "ref": "#refs"
+    }
+  ],
+  "agendaCta": {
+    "title": "A 6ª Semana Lixo Zero Itajaí foi encerrada",
+    "text": "Em breve publicaremos o balanço com resultados e aprendizados. Enquanto isso, consulte a agenda final, os registros no Padlet e acompanhe o @itajai.lixozero para as próximas ações.",
+    "site": "https://www.semanalixozero.eco.br/itajai",
+    "padlet": "https://padlet.com/trilhadavidaea/painel-interativo-disciplina-de-projetos-comunit-rios-de-ext-e0b4jxxqdn7md88f",
+    "instagram": "https://www.instagram.com/itajai.lixozero/",
+    "form": ""
+  }
+}
