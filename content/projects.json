@@ -108,11 +108,11 @@
   ],
   "refs": [
     {
-      "label": "ODS 12 – ONU Brasil",
+      "label": "ODS 12 - ONU Brasil",
       "url": "https://brasil.un.org/pt-br/sdgs/12"
     },
     {
-      "label": "PNRS – Lei 12.305/2010 (Planalto)",
+      "label": "PNRS - Lei 12.305/2010 (Planalto)",
       "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
     },
     {
@@ -137,7 +137,7 @@
   },
   "awareness": [
     {
-      "label": "Limpo e seco → reciclagem garantida",
+      "label": "Limpo e seco = reciclagem garantida",
       "ref": "#refs"
     },
     {
@@ -163,9 +163,8 @@
   ],
   "agendaCta": {
     "title": "A 6ª Semana Lixo Zero Itajaí foi encerrada",
-    "text": "Em breve publicaremos o balanço com resultados e aprendizados. Enquanto isso, consulte a agenda final, os registros no Padlet e acompanhe o @itajai.lixozero para as próximas ações.",
+    "text": "Em breve publicaremos o balanço com resultados e aprendizados. Enquanto isso, consulte a agenda final e acompanhe o @itajai.lixozero para as próximas ações.",
     "site": "https://www.semanalixozero.eco.br/itajai",
-    "padlet": "https://padlet.com/trilhadavidaea/painel-interativo-disciplina-de-projetos-comunit-rios-de-ext-e0b4jxxqdn7md88f",
     "instagram": "https://www.instagram.com/itajai.lixozero/",
     "form": ""
   }

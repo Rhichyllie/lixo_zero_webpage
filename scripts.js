@@ -304,7 +304,6 @@ function renderAgendaCta(agendaCta) {
       </div>
       <div class="button-grid button-grid--inline">
         ${agendaCta.site ? `<a class="button button--brand" href="${agendaCta.site}" target="_blank" rel="noopener">Ver agenda final</a>` : ''}
-        ${agendaCta.padlet ? `<a class="button button--ghost" href="${agendaCta.padlet}" target="_blank" rel="noopener">Padlet</a>` : ''}
         ${agendaCta.instagram ? `<a class="button button--ghost" href="${agendaCta.instagram}" target="_blank" rel="noopener">Instagram @itajai.lixozero</a>` : ''}
       </div>
     </div>
@@ -1027,4 +1026,3 @@ function focusMarkerByName(name) {
   }
   return true;
 }
-
