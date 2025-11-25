@@ -60,49 +60,42 @@
   "events": [],
   "projects": [
     {
-      "title": "Guia visual de compostagem urbana",
-      "type": "pdf",
-      "url": "https://www.unep.org/sites/default/files/2023-03/compostagem-urbana.pdf",
-      "thumb": "assets/thumb-compostagem.svg",
-      "desc": "Fluxo passo a passo para implementar compostagem em pequenos espaços.",
-      "tags": [
-        "compostagem",
-        "orgânicos",
-        "passo a passo"
-      ]
-    },
-    {
-      "title": "Documentário: Rumo ao lixo zero BC",
-      "type": "video",
-      "url": "https://www.youtube.com/watch?v=5qap5aO4i9A",
-      "thumb": "assets/thumb-documentario.svg",
-      "desc": "Histórias de moradores que transformaram a gestão de resíduos no bairro.",
-      "tags": [
-        "educação",
-        "histórias",
-        "vídeo"
-      ]
-    },
-    {
-      "title": "Mapa fotográfico dos ecopontos",
-      "type": "image",
-      "url": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80",
-      "thumb": "assets/thumb-ecopontos.svg",
-      "desc": "Registro fotográfico dos principais pontos de entrega voluntária.",
-      "tags": [
-        "ecopontos",
-        "fotografia"
-      ]
-    },
-    {
-      "title": "Planilha de indicadores semanais",
+      "title": "Desafio Lixo Zero 7 dias",
       "type": "link",
-      "url": "https://docs.google.com/spreadsheets/d/indicadores-lixo-zero",
-      "thumb": "assets/thumb-planilha.svg",
-      "desc": "Tabela colaborativa para registrar pesos e destinos dos resíduos.",
+      "url": "https://www.instagram.com/p/DQRpaOAjTjo/?igsh=MTE4MGxwNWY5ZG41eg==",
+      "thumb": "assets/thumb-compostagem.svg",
+      "desc": "Sequência prática de 7 dias para testar hábitos lixo zero com a comunidade.",
       "tags": [
-        "dados",
-        "monitoramento"
+        "desafio",
+        "hábitos",
+        "instagram",
+        "lixo zero"
+      ]
+    },
+    {
+      "title": "Podcast Cooperfoz: Transformar lixo em recurso é inteligência ambiental",
+      "type": "video",
+      "url": "https://youtu.be/uS0q_pW15N0",
+      "thumb": "assets/thumb-documentario.svg",
+      "desc": "Roda de conversa da Semana Lixo Zero sobre o trabalho da Cooperfoz e economia solidária.",
+      "tags": [
+        "podcast",
+        "cooperativa",
+        "economia solidária",
+        "semana lixo zero"
+      ]
+    },
+    {
+      "title": "Webinar: Construindo Sociedades Sustentáveis - do resíduo à inovação",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=zaX4Brklu70",
+      "thumb": "assets/thumb-planilha.svg",
+      "desc": "Webinar sobre soluções inovadoras para gestão de resíduos e cidades mais circulares.",
+      "tags": [
+        "webinar",
+        "inovação",
+        "gestão de resíduos",
+        "sustentabilidade"
       ]
     }
   ],

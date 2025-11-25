@@ -58,35 +58,47 @@
         <a class="brand" href="#topo" aria-label="Início Lixo Zero Express">
           <span aria-hidden="true">♻️</span> Lixo Zero <span>Express</span>
         </a>
-        <nav class="nav" aria-label="Navegação principal">
-          <ul>
-            <li><a href="#guia">Guia</a></li>
-            <li><a href="#mapa">Mapa</a></li>
-            <li><a href="#parceiro">Parceiro</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#agenda">Agenda</a></li>
-            <li><a href="#sobre">UNIVALI</a></li>
-          </ul>
-        </nav>
-        <div class="topbar__actions">
-          <button type="button" id="shareButton" class="chip" data-action="share">
-            <span aria-hidden="true">📤</span>
-            <span>Compartilhar</span>
-          </button>
-          <button type="button" id="qrButton" class="chip chip--brand">
-            <span aria-hidden="true">📷</span>
-            <span>Baixar QR</span>
-          </button>
-          <button
-            type="button"
-            id="themeToggle"
-            class="chip"
-            aria-label="Alternar modo de cor"
-            aria-live="polite"
-          >
-            <span aria-hidden="true">🌟</span>
-            <span class="theme-toggle__label">Tema</span>
-          </button>
+        <button
+          type="button"
+          class="topbar__menu"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="topbarNav"
+        >
+          <span class="topbar__menu-icon" aria-hidden="true">☰</span>
+          <span class="topbar__menu-label">Menu</span>
+        </button>
+        <div class="topbar__nav-wrapper" id="topbarNav">
+          <nav class="nav" aria-label="Navegação principal">
+            <ul>
+              <li><a href="#guia">Guia</a></li>
+              <li><a href="#mapa">Mapa</a></li>
+              <li><a href="#parceiro">Parceiro</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#agenda">Agenda</a></li>
+              <li><a href="#sobre">UNIVALI</a></li>
+            </ul>
+          </nav>
+          <div class="topbar__actions">
+            <button type="button" id="shareButton" class="chip" data-action="share">
+              <span aria-hidden="true">📤</span>
+              <span>Compartilhar</span>
+            </button>
+            <button type="button" id="qrButton" class="chip chip--brand">
+              <span aria-hidden="true">📷</span>
+              <span>Baixar QR</span>
+            </button>
+            <button
+              type="button"
+              id="themeToggle"
+              class="chip"
+              aria-label="Alternar modo de cor"
+              aria-live="polite"
+            >
+              <span aria-hidden="true">🌟</span>
+              <span class="theme-toggle__label">Tema</span>
+            </button>
+          </div>
         </div>
       </div>
     </header>

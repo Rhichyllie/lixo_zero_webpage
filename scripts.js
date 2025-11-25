@@ -77,6 +77,7 @@ async function init() {
   setupShare();
   setupQrDownload();
   setupHeroQrShortcut();
+  setupNavigationToggle();
 
   const data = await loadContent();
   if (!data) return;
@@ -207,6 +208,64 @@ function setupHeroQrShortcut() {
     event.preventDefault();
     mainButton.click();
   });
+}
+
+function setupNavigationToggle() {
+  const toggle = document.getElementById('menuToggle');
+  const navWrapper = document.getElementById('topbarNav');
+  const topbar = document.querySelector('.topbar');
+  const mobileQuery = window.matchMedia('(max-width: 960px)');
+  if (!toggle || !navWrapper || !topbar) return;
+
+  const closeMenu = () => {
+    topbar.classList.remove('topbar--open');
+    toggle.setAttribute('aria-expanded', 'false');
+    if (mobileQuery.matches) {
+      navWrapper.setAttribute('hidden', '');
+      navWrapper.setAttribute('aria-hidden', 'true');
+    } else {
+      navWrapper.removeAttribute('aria-hidden');
+    }
+  };
+
+  const syncForViewport = () => {
+    if (!mobileQuery.matches) {
+      navWrapper.removeAttribute('hidden');
+      navWrapper.removeAttribute('aria-hidden');
+      topbar.classList.remove('topbar--open');
+      toggle.setAttribute('aria-expanded', 'false');
+    } else {
+      closeMenu();
+    }
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = topbar.classList.toggle('topbar--open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (mobileQuery.matches) {
+      navWrapper.toggleAttribute('hidden', !isOpen);
+      navWrapper.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    } else {
+      navWrapper.removeAttribute('aria-hidden');
+    }
+  });
+
+  navWrapper.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mobileQuery.matches) {
+        closeMenu();
+      }
+    });
+  });
+
+  document.addEventListener('keyup', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  mobileQuery.addEventListener('change', syncForViewport);
+  syncForViewport();
 }
 
 async function loadContent() {
