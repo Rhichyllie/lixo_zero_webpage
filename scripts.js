@@ -259,8 +259,17 @@ function populateReferences(refs) {
   if (!list) return;
   list.innerHTML = '';
 
+  const getHost = (url) => {
+    try {
+      return new URL(url).hostname.replace(/^www\./, '');
+    } catch {
+      return 'Fonte oficial';
+    }
+  };
+
   if (!Array.isArray(refs) || refs.length === 0) {
     const item = document.createElement('li');
+    item.className = 'reference-card reference-card--empty';
     item.textContent = 'Referências serão publicadas em breve.';
     list.appendChild(item);
     return;
@@ -269,13 +278,23 @@ function populateReferences(refs) {
   const fragment = document.createDocumentFragment();
   refs.forEach((ref) => {
     const li = document.createElement('li');
+    li.className = 'reference-card';
+
+    const title = document.createElement('strong');
+    title.textContent = ref.label;
+
+    const meta = document.createElement('span');
+    meta.className = 'reference-card__meta';
+    meta.textContent = getHost(ref.url);
+
     const anchor = document.createElement('a');
     anchor.href = ref.url;
-    anchor.textContent = ref.label;
+    anchor.textContent = 'Abrir referência';
     anchor.target = '_blank';
     anchor.rel = 'noopener noreferrer';
+    anchor.className = 'reference-card__link';
     anchor.setAttribute('aria-label', `${ref.label} (abre em nova aba)`);
-    li.appendChild(anchor);
+    li.append(title, meta, anchor);
     fragment.appendChild(li);
   });
   list.appendChild(fragment);

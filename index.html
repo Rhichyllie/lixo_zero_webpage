@@ -93,16 +93,19 @@
     <main id="principal">
             <section class="hero" aria-labelledby="hero-title">
         <div class="container hero__layout">
-          <figure class="hero__art" aria-hidden="true">
+          <figure class="hero__art">
             <div class="hero__art-glow" role="presentation"></div>
-            <img
-              src="assets/hero.jpg?v=2"
-              alt="Materiais recicláveis e embalagens limpas prontos para entrega na cooperativa."
-              width="720"
-              height="680"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture class="hero__media">
+              <img
+                src="assets/hero.jpg"
+                alt="Materiais recicláveis e embalagens limpas prontos para entrega na cooperativa."
+                width="720"
+                height="680"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
           </figure>
           <div class="hero__copy">
             <p class="eyebrow kicker">Semana Lixo Zero — UNIVALI</p>
