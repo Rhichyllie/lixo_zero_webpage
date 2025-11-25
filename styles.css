@@ -400,14 +400,26 @@ main {
   padding: clamp(22px, 4vw, 32px);
   border-radius: var(--radius-xl);
   border: 1px solid rgba(14, 188, 122, 0.28);
-  background: linear-gradient(145deg, rgba(14, 188, 122, 0.18), rgba(15, 118, 110, 0.08));
+  background:
+    linear-gradient(145deg, rgba(14, 188, 122, 0.22), rgba(15, 118, 110, 0.1)),
+    url('assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
   overflow: hidden;
   isolation: isolate;
   box-shadow: var(--shadow-soft);
 }
 
 body[data-theme='dark'] .hero__art {
-  background: linear-gradient(145deg, rgba(33, 212, 155, 0.2), rgba(246, 199, 109, 0.12));
+  background:
+    linear-gradient(145deg, rgba(33, 212, 155, 0.22), rgba(246, 199, 109, 0.14)),
+    url('assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 .hero__art img {
@@ -419,6 +431,7 @@ body[data-theme='dark'] .hero__art {
   object-fit: cover;
   transform: translateZ(0);
   box-shadow: 0 16px 34px rgba(12, 18, 32, 0.16);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .hero__art-glow {
@@ -1139,19 +1152,20 @@ body[data-theme='dark'] .about__team li {
 }
 
 .references {
-  padding-bottom: clamp(44px, 7vw, 68px);
+  padding-bottom: clamp(52px, 8vw, 84px);
 }
 
 .references__list {
   display: grid;
-  gap: 14px;
+  gap: clamp(14px, 3vw, 20px);
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: clamp(10px, 3vw, 18px) auto 0;
+  max-width: 960px;
 }
 
 .references__list li {
-  padding: 14px 16px;
+  padding: 16px 18px;
   border-radius: var(--radius-md);
   border: 1px solid rgba(14, 188, 122, 0.16);
   background: linear-gradient(150deg, rgba(14, 188, 122, 0.06), #ffffff);
@@ -1173,7 +1187,7 @@ body[data-theme='dark'] .about__team li {
 }
 
 .footer {
-  padding: clamp(32px, 4vw, 48px) 0;
+  padding: clamp(44px, 5vw, 64px) 0;
   border-top: 1px solid rgba(14, 188, 122, 0.18);
   background: linear-gradient(120deg, rgba(14, 188, 122, 0.06), rgba(15, 118, 110, 0.04));
 }
