@@ -214,7 +214,7 @@ function setupNavigationToggle() {
   const toggle = document.getElementById('menuToggle');
   const navWrapper = document.getElementById('topbarNav');
   const topbar = document.querySelector('.topbar');
-  const mobileQuery = window.matchMedia('(max-width: 960px)');
+  const mobileQuery = window.matchMedia('(max-width: 1023px)');
   if (!toggle || !navWrapper || !topbar) return;
 
   const closeMenu = () => {
